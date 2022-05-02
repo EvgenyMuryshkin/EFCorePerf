@@ -3,7 +3,7 @@
 Experiencing major performance degradation on production database with lots of data in tables.
 Overall perf impact after upgrade is from 2x to occasional 100x
 
-## Machine spec
+## Test machine spec
 * Windows 10 Pro, 64-bit operating system, x64-based processor
 * Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz   3.00 GHz
 * 32.0 GB
