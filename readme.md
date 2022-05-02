@@ -5,6 +5,10 @@ Overall perf impact after upgrade is from 2x to occasional 100x
 
 ## Test Summary
 
+EF2CorePerfTests (10 sec) vs EF6CorePerfTests (50 sec)
+
+![Test Summary](https://github.com/EvgenyMuryshkin/EFCorePerf/blob/main/img/summary.png)
+
 ## Multiplart backup download links
 Download multipart archive, extract into single backup file 'efperftest'
 
