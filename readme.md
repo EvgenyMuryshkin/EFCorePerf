@@ -16,8 +16,10 @@ EF2CorePerfTests (10 sec) vs EF6CorePerfTests (50 sec)
 ![Test Summary](https://github.com/EvgenyMuryshkin/EFCorePerf/blob/main/img/summary.png)
 
 
-## Multiplart backup download links
+## Multipart backup download links
 Download multipart archive, extract into single backup file 'efperftest'
+
+https://drive.google.com/drive/folders/1WgKX1SelapG1Iqa1XVCjGA2SMlk-_xZE?usp=sharing
 
 ## Database setup
 * Create database efperftest
