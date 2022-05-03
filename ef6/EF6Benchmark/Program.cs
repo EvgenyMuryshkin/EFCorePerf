@@ -44,7 +44,7 @@ namespace EF6Benchmark
 
                 foreach (var id in Enumerable.Range(0, interations))
                 {
-                    var shippingUnitIds = testIds.Skip(Idx * 2).Take(2).ToHashSet();
+                    var shippingUnitIds = testIds.Skip(id * 2).Take(2).ToHashSet();
                     suIds.Add(shippingUnitIds);
                 }
             }
