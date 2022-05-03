@@ -11,9 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using transactions.sql;
 
-namespace EF2Benchmark
+namespace EF6Benchmark
 {
-    public class EF2CoreBenchmark
+    public class EF6CoreBenchmark
     {
         long batchId => EFPerfTestValues.batchId;
         txnTransactionsDBContext Context
@@ -81,7 +81,7 @@ namespace EF2Benchmark
         {
             var config = ManualConfig.CreateMinimumViable();
             config.AddExporter(CsvMeasurementsExporter.Default);
-            var summary = BenchmarkRunner.Run<EF2CoreBenchmark>(config);
+            var summary = BenchmarkRunner.Run<EF6CoreBenchmark>(config);
         }
     }
 }
