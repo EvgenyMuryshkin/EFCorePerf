@@ -3,10 +3,79 @@
 Experiencing major performance degradation on production database with lots of data in tables.
 Overall perf impact after upgrade is from 2x to occasional 100x
 
+## Test machine spec
+* Windows 10 Pro, 64-bit operating system, x64-based processor
+* Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz   3.00 GHz
+* 32.0 GB
+* Microsoft SQL Server Developer (64-bit) 15.0.2000.5
+
 ## Test Summary
 
-## Multiplart backup download links
-Download multipart archive, extract into single backup file 'efperftest'
+EF2CorePerfTests (10 sec) vs EF6CorePerfTests (50 sec)
+
+![Test Summary](https://github.com/EvgenyMuryshkin/EFCorePerf/blob/main/img/summary.png)
+
+## Benchmark.NET
+
+**EF2**
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1645 (21H2)
+
+Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
+
+.NET SDK=6.0.202
+
+  [Host]     : .NET Core 3.1.24 (CoreCLR 4.700.22.16002, CoreFX 4.700.22.17909), X64 RyuJIT
+  
+  DefaultJob : .NET Core 3.1.24 (CoreCLR 4.700.22.16002, CoreFX 4.700.22.17909), X64 RyuJIT
+
+
+|                            Method | Idx |     Mean |    Error |   StdDev |
+|---------------------------------- |---- |---------:|---------:|---------:|
+| Default_Existing_ByShippingUnitId |   0 | 12.28 ms | 0.063 ms | 0.049 ms |
+|  Default_Missing_ByShippingUnitId |   0 | 53.38 ms | 0.571 ms | 0.534 ms |
+| Default_Existing_ByShippingUnitId |   1 | 11.02 ms | 0.051 ms | 0.042 ms |
+|  Default_Missing_ByShippingUnitId |   1 | 53.30 ms | 0.627 ms | 0.586 ms |
+| Default_Existing_ByShippingUnitId |   2 | 11.05 ms | 0.216 ms | 0.222 ms |
+|  Default_Missing_ByShippingUnitId |   2 | 53.37 ms | 0.800 ms | 0.749 ms |
+| Default_Existing_ByShippingUnitId |   3 | 15.28 ms | 0.074 ms | 0.070 ms |
+|  Default_Missing_ByShippingUnitId |   3 | 53.66 ms | 0.723 ms | 0.676 ms |
+| Default_Existing_ByShippingUnitId |   4 | 14.55 ms | 0.037 ms | 0.029 ms |
+|  Default_Missing_ByShippingUnitId |   4 | 55.72 ms | 1.103 ms | 2.203 ms |
+
+**EF6**
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1645 (21H2)
+
+Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
+
+.NET SDK=6.0.202
+
+  [Host]     : .NET 6.0.4 (6.0.422.16404), X64 RyuJIT
+  
+  DefaultJob : .NET 6.0.4 (6.0.422.16404), X64 RyuJIT
+  
+|                            Method | Idx |      Mean |    Error |    StdDev |    Median |
+|---------------------------------- |---- |----------:|---------:|----------:|----------:|
+| Default_Existing_ByShippingUnitId |   0 |  50.05 ms | 0.808 ms |  0.993 ms |  49.61 ms |
+|  Default_Missing_ByShippingUnitId |   0 | 402.18 ms | 8.005 ms | 20.375 ms | 397.92 ms |
+| Default_Existing_ByShippingUnitId |   1 |  44.47 ms | 0.240 ms |  0.213 ms |  44.46 ms |
+|  Default_Missing_ByShippingUnitId |   1 | 405.74 ms | 8.101 ms | 17.783 ms | 401.35 ms |
+| Default_Existing_ByShippingUnitId |   2 |  55.78 ms | 1.095 ms |  1.261 ms |  56.12 ms |
+|  Default_Missing_ByShippingUnitId |   2 | 403.93 ms | 8.002 ms | 18.226 ms | 397.08 ms |
+| Default_Existing_ByShippingUnitId |   3 |  47.12 ms | 0.312 ms |  0.261 ms |  47.19 ms |
+|  Default_Missing_ByShippingUnitId |   3 | 397.28 ms | 7.149 ms | 11.544 ms | 395.65 ms |
+| Default_Existing_ByShippingUnitId |   4 |  54.75 ms | 0.593 ms |  0.555 ms |  54.78 ms |
+|  Default_Missing_ByShippingUnitId |   4 | 402.92 ms | 8.058 ms | 17.172 ms | 396.61 ms |
+
+## Multipart backup download links
+Download multipart archive (5 Gb backup), extract into single backup file 'efperftest'
+
+https://drive.google.com/drive/folders/1WgKX1SelapG1Iqa1XVCjGA2SMlk-_xZE?usp=sharing
 
 ## Database setup
 * Create database efperftest
