@@ -235,6 +235,7 @@ ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id],
 
 First set of queries are fast and do not have nested select
 Subsequent query with nested select is stalling data fetch
+
 ```sql
 exec sp_executesql N'SELECT [s].[id], [s].[comments], [s].[date_created], [s].[date_time], [s].[date_updated], [s].[end_reference_id], [s].[event], [s].[identity_id], [s].[is_system], [s].[quantity], [s].[receipent_id], [s].[revision], 
 [s].[shipping_unit_id], [s].[start_reference_id], [s].[transaction_id], [r].[id], [r].[cargo_request_id], [r].[consignment_id], [r].[container_id], [r].[date_id], [r].[entity_id], [r].[index_in_cargo_request], [r].[index_in_consignment], 
