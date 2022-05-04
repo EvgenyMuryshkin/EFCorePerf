@@ -59,18 +59,38 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
   
   DefaultJob : .NET 6.0.4 (6.0.422.16404), X64 RyuJIT
   
-|                            Method | Idx |      Mean |    Error |    StdDev |    Median |
-|---------------------------------- |---- |----------:|---------:|----------:|----------:|
-| Default_Existing_ByShippingUnitId |   0 |  50.05 ms | 0.808 ms |  0.993 ms |  49.61 ms |
-|  Default_Missing_ByShippingUnitId |   0 | 402.18 ms | 8.005 ms | 20.375 ms | 397.92 ms |
-| Default_Existing_ByShippingUnitId |   1 |  44.47 ms | 0.240 ms |  0.213 ms |  44.46 ms |
-|  Default_Missing_ByShippingUnitId |   1 | 405.74 ms | 8.101 ms | 17.783 ms | 401.35 ms |
-| Default_Existing_ByShippingUnitId |   2 |  55.78 ms | 1.095 ms |  1.261 ms |  56.12 ms |
-|  Default_Missing_ByShippingUnitId |   2 | 403.93 ms | 8.002 ms | 18.226 ms | 397.08 ms |
-| Default_Existing_ByShippingUnitId |   3 |  47.12 ms | 0.312 ms |  0.261 ms |  47.19 ms |
-|  Default_Missing_ByShippingUnitId |   3 | 397.28 ms | 7.149 ms | 11.544 ms | 395.65 ms |
-| Default_Existing_ByShippingUnitId |   4 |  54.75 ms | 0.593 ms |  0.555 ms |  54.78 ms |
-|  Default_Missing_ByShippingUnitId |   4 | 402.92 ms | 8.058 ms | 17.172 ms | 396.61 ms |
+|                                    Method | Idx |      Mean |    Error |    StdDev |    Median |
+|------------------------------------------ |---- |----------:|---------:|----------:|----------:|
+|         Default_Existing_ByShippingUnitId |   0 |  54.03 ms | 1.721 ms |  4.769 ms |  52.48 ms |
+|          Default_Missing_ByShippingUnitId |   0 | 410.28 ms | 8.191 ms | 19.307 ms | 405.12 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   0 | 266.90 ms | 5.290 ms |  8.235 ms | 268.17 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   0 |  50.79 ms | 1.016 ms |  1.611 ms |  50.91 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   0 | 113.37 ms | 0.817 ms |  0.683 ms | 113.44 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   0 | 241.27 ms | 1.667 ms |  1.478 ms | 241.24 ms |
+|         Default_Existing_ByShippingUnitId |   1 |  46.96 ms | 0.921 ms |  0.985 ms |  46.50 ms |
+|          Default_Missing_ByShippingUnitId |   1 | 400.99 ms | 5.610 ms |  4.684 ms | 402.71 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   1 | 271.47 ms | 5.363 ms |  9.251 ms | 271.25 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   1 |  50.89 ms | 1.006 ms |  1.708 ms |  50.62 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   1 | 114.25 ms | 1.833 ms |  1.625 ms | 113.78 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   1 | 238.74 ms | 2.373 ms |  2.219 ms | 238.52 ms |
+|         Default_Existing_ByShippingUnitId |   2 |  46.92 ms | 0.267 ms |  0.250 ms |  46.88 ms |
+|          Default_Missing_ByShippingUnitId |   2 | 408.21 ms | 8.146 ms | 17.880 ms | 404.87 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   2 | 270.63 ms | 5.264 ms |  9.220 ms | 271.75 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   2 |  50.09 ms | 0.915 ms |  0.856 ms |  49.76 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   2 | 112.06 ms | 1.764 ms |  2.166 ms | 111.25 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   2 | 240.88 ms | 1.754 ms |  1.641 ms | 241.26 ms |
+|         Default_Existing_ByShippingUnitId |   3 |  45.49 ms | 0.185 ms |  0.154 ms |  45.49 ms |
+|          Default_Missing_ByShippingUnitId |   3 | 413.36 ms | 8.262 ms | 21.473 ms | 406.30 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   3 | 269.67 ms | 5.369 ms |  9.682 ms | 269.46 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   3 |  50.85 ms | 0.943 ms |  1.291 ms |  50.70 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   3 | 112.14 ms | 0.461 ms |  0.431 ms | 112.23 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   3 | 242.51 ms | 3.648 ms |  3.412 ms | 242.89 ms |
+|         Default_Existing_ByShippingUnitId |   4 |  48.72 ms | 0.955 ms |  0.981 ms |  48.27 ms |
+|          Default_Missing_ByShippingUnitId |   4 | 407.91 ms | 7.971 ms | 14.576 ms | 404.25 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   4 | 265.89 ms | 5.156 ms |  8.178 ms | 266.33 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   4 |  51.60 ms | 1.022 ms |  1.969 ms |  51.30 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   4 | 112.71 ms | 0.732 ms |  0.611 ms | 113.06 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   4 | 243.09 ms | 1.180 ms |  1.104 ms | 243.31 ms |
 
 ## Multipart backup download links
 Download multipart archive (5 Gb backup), extract into single backup file 'efperftest'
