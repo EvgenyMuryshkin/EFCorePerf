@@ -2,6 +2,7 @@ using common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using transactions.sql;
@@ -76,9 +77,18 @@ namespace EF6CorePerf
             }
         }
 
+        class Log
+        {
+            public int Iteration;
+            public long Duration;
+            public List<Guid> Ids;
+        }
+
         [TestMethod]
         public void Existing_ByShippingUnitId()
         {
+            var logs = new List<Log>();
+
             var suIds = new List<Guid>();
             using (var ctx = Context)
             {
@@ -90,9 +100,17 @@ namespace EF6CorePerf
                 using (var ctx = Context)
                 {
                     var shippingUnitIds = suIds.Skip(i * 2).Take(2).ToHashSet();
+                    var sw = new Stopwatch();
+                    sw.Start();
                     var entities = ctx.ShippingUnitsWithCompositesAsSplitQuery.Where(i => shippingUnitIds.Contains(i.ShippingUnitId) && i.TransactionId < batchId).ToList();
                     Assert.IsTrue(entities.Count != 0);
+                    logs.Add(new Log() { Iteration = i, Duration = sw.ElapsedMilliseconds, Ids = shippingUnitIds.ToList() });
                 }
+            }
+
+            foreach (var log in logs.OrderByDescending(l => l.Duration))
+            {
+                Console.WriteLine($"{log.Duration} ms: @{log.Iteration} {log.Ids[0]}, {log.Ids[1]}");
             }
         }
     }
