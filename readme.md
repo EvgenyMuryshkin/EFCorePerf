@@ -92,6 +92,17 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
 | EFPlusOptimized_Existing_ByShippingUnitId |   4 | 112.71 ms | 0.732 ms |  0.611 ms | 113.06 ms |
 |  EFPlusOptimized_Missing_ByShippingUnitId |   4 | 243.09 ms | 1.180 ms |  1.104 ms | 243.31 ms |
 
+More work needed to pick up occasional stall in AsSplitQuery, only have results from UnitTest for some queries
+```
+9046 ms: @4 892dcc65-fc89-44c8-b432-0016fc98e75e, 7ddd5fd0-afc9-44d5-a6f7-0017fa375f0e
+8867 ms: @5 5a677ab0-c4d6-47f9-b1aa-001b060cb534, 21633c0b-f7a6-4119-8627-001b4a23c016
+8527 ms: @7 cc10a5ca-7c53-4122-ab43-002934389896, 93ff9f71-19b4-4124-8ffa-00342c638d2c
+8520 ms: @6 89335903-a818-4c71-9190-00262c9d1e06, 420efcf2-3c30-460d-876c-0028663a602f
+8400 ms: @0 341fc4bf-55b7-456f-8d85-0002cbed978f, f6a17a98-e060-4834-a2f4-00060ec83bf0
+8289 ms: @50 7efae263-b3ad-4f65-85f9-0139c9c45429, f69d8424-3fa1-46c7-864b-013a6cfa5930
+8213 ms: @58 beb179bc-3395-45b1-a90e-017b2fdd3f54, e278becb-2b3d-4eb6-b4d7-017b8ca57166
+```
+
 ## Multipart backup download links
 Download multipart archive (5 Gb backup), extract into single backup file 'efperftest'
 
