@@ -59,18 +59,49 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
   
   DefaultJob : .NET 6.0.4 (6.0.422.16404), X64 RyuJIT
   
-|                            Method | Idx |      Mean |    Error |    StdDev |    Median |
-|---------------------------------- |---- |----------:|---------:|----------:|----------:|
-| Default_Existing_ByShippingUnitId |   0 |  50.05 ms | 0.808 ms |  0.993 ms |  49.61 ms |
-|  Default_Missing_ByShippingUnitId |   0 | 402.18 ms | 8.005 ms | 20.375 ms | 397.92 ms |
-| Default_Existing_ByShippingUnitId |   1 |  44.47 ms | 0.240 ms |  0.213 ms |  44.46 ms |
-|  Default_Missing_ByShippingUnitId |   1 | 405.74 ms | 8.101 ms | 17.783 ms | 401.35 ms |
-| Default_Existing_ByShippingUnitId |   2 |  55.78 ms | 1.095 ms |  1.261 ms |  56.12 ms |
-|  Default_Missing_ByShippingUnitId |   2 | 403.93 ms | 8.002 ms | 18.226 ms | 397.08 ms |
-| Default_Existing_ByShippingUnitId |   3 |  47.12 ms | 0.312 ms |  0.261 ms |  47.19 ms |
-|  Default_Missing_ByShippingUnitId |   3 | 397.28 ms | 7.149 ms | 11.544 ms | 395.65 ms |
-| Default_Existing_ByShippingUnitId |   4 |  54.75 ms | 0.593 ms |  0.555 ms |  54.78 ms |
-|  Default_Missing_ByShippingUnitId |   4 | 402.92 ms | 8.058 ms | 17.172 ms | 396.61 ms |
+|                                    Method | Idx |      Mean |    Error |    StdDev |    Median |
+|------------------------------------------ |---- |----------:|---------:|----------:|----------:|
+|         Default_Existing_ByShippingUnitId |   0 |  54.03 ms | 1.721 ms |  4.769 ms |  52.48 ms |
+|          Default_Missing_ByShippingUnitId |   0 | 410.28 ms | 8.191 ms | 19.307 ms | 405.12 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   0 | 266.90 ms | 5.290 ms |  8.235 ms | 268.17 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   0 |  50.79 ms | 1.016 ms |  1.611 ms |  50.91 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   0 | 113.37 ms | 0.817 ms |  0.683 ms | 113.44 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   0 | 241.27 ms | 1.667 ms |  1.478 ms | 241.24 ms |
+|         Default_Existing_ByShippingUnitId |   1 |  46.96 ms | 0.921 ms |  0.985 ms |  46.50 ms |
+|          Default_Missing_ByShippingUnitId |   1 | 400.99 ms | 5.610 ms |  4.684 ms | 402.71 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   1 | 271.47 ms | 5.363 ms |  9.251 ms | 271.25 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   1 |  50.89 ms | 1.006 ms |  1.708 ms |  50.62 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   1 | 114.25 ms | 1.833 ms |  1.625 ms | 113.78 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   1 | 238.74 ms | 2.373 ms |  2.219 ms | 238.52 ms |
+|         Default_Existing_ByShippingUnitId |   2 |  46.92 ms | 0.267 ms |  0.250 ms |  46.88 ms |
+|          Default_Missing_ByShippingUnitId |   2 | 408.21 ms | 8.146 ms | 17.880 ms | 404.87 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   2 | 270.63 ms | 5.264 ms |  9.220 ms | 271.75 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   2 |  50.09 ms | 0.915 ms |  0.856 ms |  49.76 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   2 | 112.06 ms | 1.764 ms |  2.166 ms | 111.25 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   2 | 240.88 ms | 1.754 ms |  1.641 ms | 241.26 ms |
+|         Default_Existing_ByShippingUnitId |   3 |  45.49 ms | 0.185 ms |  0.154 ms |  45.49 ms |
+|          Default_Missing_ByShippingUnitId |   3 | 413.36 ms | 8.262 ms | 21.473 ms | 406.30 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   3 | 269.67 ms | 5.369 ms |  9.682 ms | 269.46 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   3 |  50.85 ms | 0.943 ms |  1.291 ms |  50.70 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   3 | 112.14 ms | 0.461 ms |  0.431 ms | 112.23 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   3 | 242.51 ms | 3.648 ms |  3.412 ms | 242.89 ms |
+|         Default_Existing_ByShippingUnitId |   4 |  48.72 ms | 0.955 ms |  0.981 ms |  48.27 ms |
+|          Default_Missing_ByShippingUnitId |   4 | 407.91 ms | 7.971 ms | 14.576 ms | 404.25 ms |
+|    AsSplitQuery_Existing_ByShippingUnitId |   4 | 265.89 ms | 5.156 ms |  8.178 ms | 266.33 ms |
+|     AsSplitQuery_Missing_ByShippingUnitId |   4 |  51.60 ms | 1.022 ms |  1.969 ms |  51.30 ms |
+| EFPlusOptimized_Existing_ByShippingUnitId |   4 | 112.71 ms | 0.732 ms |  0.611 ms | 113.06 ms |
+|  EFPlusOptimized_Missing_ByShippingUnitId |   4 | 243.09 ms | 1.180 ms |  1.104 ms | 243.31 ms |
+
+More work needed to pick up occasional stall in AsSplitQuery, only have results from UnitTest for some queries
+```
+9046 ms: @4 892dcc65-fc89-44c8-b432-0016fc98e75e, 7ddd5fd0-afc9-44d5-a6f7-0017fa375f0e
+8867 ms: @5 5a677ab0-c4d6-47f9-b1aa-001b060cb534, 21633c0b-f7a6-4119-8627-001b4a23c016
+8527 ms: @7 cc10a5ca-7c53-4122-ab43-002934389896, 93ff9f71-19b4-4124-8ffa-00342c638d2c
+8520 ms: @6 89335903-a818-4c71-9190-00262c9d1e06, 420efcf2-3c30-460d-876c-0028663a602f
+8400 ms: @0 341fc4bf-55b7-456f-8d85-0002cbed978f, f6a17a98-e060-4834-a2f4-00060ec83bf0
+8289 ms: @50 7efae263-b3ad-4f65-85f9-0139c9c45429, f69d8424-3fa1-46c7-864b-013a6cfa5930
+8213 ms: @58 beb179bc-3395-45b1-a90e-017b2fdd3f54, e278becb-2b3d-4eb6-b4d7-017b8ca57166
+```
 
 ## Multipart backup download links
 Download multipart archive (5 Gb backup), extract into single backup file 'efperftest'
@@ -234,8 +265,109 @@ ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id],
 ### EF6 with split query, which snailed along
 
 First set of queries are fast and do not have nested select
-
 Subsequent query with nested select is stalling data fetch
+
+```sql
+exec sp_executesql N'SELECT [s].[id], [s].[comments], [s].[date_created], [s].[date_time], [s].[date_updated], [s].[end_reference_id], [s].[event], [s].[identity_id], [s].[is_system], [s].[quantity], [s].[receipent_id], [s].[revision], 
+[s].[shipping_unit_id], [s].[start_reference_id], [s].[transaction_id], [r].[id], [r].[cargo_request_id], [r].[consignment_id], [r].[container_id], [r].[date_id], [r].[entity_id], [r].[index_in_cargo_request], [r].[index_in_consignment], 
+[r].[index_in_container], [r].[index_in_inventory_item], [r].[index_in_shipping_unit], [r].[index_in_task], [r].[index_in_work_item], [r].[index_in_work_order], [r].[inventory_item_id], [r].[location_id], [r].[shipping_unit_id], [r].[task_id], 
+[r].[text_id], [r].[work_item_id], [r].[work_order_id], [d].[id], [d].[comments], [d].[date], [e].[id], [e].[entity_id], [e].[entity_type], [e].[revision], [e].[summary_id], [e0].[id], [e0].[basic], [e0].[detailed], [e0].[extended], [g].[id], 
+[g].[geo_mismatch], [g].[spatial_id], [s0].[id], [s0].[geometry_id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [s1].[b], [s1].[h], [s1].[l], [t].[text], [a].[identity_json], [r0].[cargo_request_id], [r0].[consignment_id], [r0].[container_id], [r0].[date_id], [r0].[entity_id], [r0].[index_in_cargo_request], [r0].[index_in_consignment], [r0].[index_in_container], [r0].[index_in_inventory_item], [r0].[index_in_shipping_unit], [r0].[index_in_task], [r0].[index_in_work_item], [r0].[index_in_work_order], [r0].[inventory_item_id], [r0].[location_id], [r0].[shipping_unit_id], [r0].[task_id], [r0].[text_id], [r0].[work_item_id], [r0].[work_order_id], [d0].[comments], [d0].[date], [e1].[entity_id], [e1].[entity_type], [e1].[revision], [e1].[summary_id], [e2].[basic], [e2].[detailed], [e2].[extended], [g0].[geo_mismatch], [g0].[spatial_id], [s2].[geometry_id], [s3].[b], [s3].[h], [s3].[l], [t0].[text], [r1].[cargo_request_id], [r1].[consignment_id], [r1].[container_id], [r1].[date_id], [r1].[entity_id], [r1].[index_in_cargo_request], [r1].[index_in_consignment], [r1].[index_in_container], [r1].[index_in_inventory_item], [r1].[index_in_shipping_unit], [r1].[index_in_task], [r1].[index_in_work_item], [r1].[index_in_work_order], [r1].[inventory_item_id], [r1].[location_id], [r1].[shipping_unit_id], [r1].[task_id], [r1].[text_id], [r1].[work_item_id], [r1].[work_order_id], [d1].[comments], [d1].[date], [e3].[entity_id], [e3].[entity_type], [e3].[revision], [e3].[summary_id], [e4].[basic], [e4].[detailed], [e4].[extended], [g1].[geo_mismatch], [g1].[spatial_id], [s4].[geometry_id], [s5].[b], [s5].[h], [s5].[l], [t1].[text]
+FROM [txn].[shipping_units] AS [s]
+LEFT JOIN [txn].[references] AS [r] ON [s].[end_reference_id] = [r].[id]
+LEFT JOIN [txn].[date_references] AS [d] ON [r].[date_id] = [d].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e] ON [r].[entity_id] = [e].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e0] ON [e].[summary_id] = [e0].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g] ON [r].[location_id] = [g].[id]
+LEFT JOIN [txn].[spatials] AS [s0] ON [g].[spatial_id] = [s0].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s1] ON [s0].[geometry_id] = [s1].[id]
+LEFT JOIN [txn].[text_references] AS [t] ON [r].[text_id] = [t].[id]
+INNER JOIN [txn].[auth_identities] AS [a] ON [s].[identity_id] = [a].[id]
+LEFT JOIN [txn].[references] AS [r0] ON [s].[receipent_id] = [r0].[id]
+LEFT JOIN [txn].[date_references] AS [d0] ON [r0].[date_id] = [d0].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e1] ON [r0].[entity_id] = [e1].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e2] ON [e1].[summary_id] = [e2].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g0] ON [r0].[location_id] = [g0].[id]
+LEFT JOIN [txn].[spatials] AS [s2] ON [g0].[spatial_id] = [s2].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s3] ON [s2].[geometry_id] = [s3].[id]
+LEFT JOIN [txn].[text_references] AS [t0] ON [r0].[text_id] = [t0].[id]
+LEFT JOIN [txn].[references] AS [r1] ON [s].[start_reference_id] = [r1].[id]
+LEFT JOIN [txn].[date_references] AS [d1] ON [r1].[date_id] = [d1].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e3] ON [r1].[entity_id] = [e3].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e4] ON [e3].[summary_id] = [e4].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g1] ON [r1].[location_id] = [g1].[id]
+LEFT JOIN [txn].[spatials] AS [s4] ON [g1].[spatial_id] = [s4].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s5] ON [s4].[geometry_id] = [s5].[id]
+LEFT JOIN [txn].[text_references] AS [t1] ON [r1].[text_id] = [t1].[id]
+WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a17a98-e060-4834-a2f4-00060ec83bf0'') AND ([s].[transaction_id] < @__batchId_1)
+ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
+```
+
+```sql
+exec sp_executesql N'SELECT [s6].[id], [s6].[elevation], [s6].[index_in_spatial], [s6].[latitude], [s6].[longitude], [s6].[spatial_id], [s6].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]
+FROM [txn].[shipping_units] AS [s]
+LEFT JOIN [txn].[references] AS [r] ON [s].[end_reference_id] = [r].[id]
+LEFT JOIN [txn].[date_references] AS [d] ON [r].[date_id] = [d].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e] ON [r].[entity_id] = [e].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e0] ON [e].[summary_id] = [e0].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g] ON [r].[location_id] = [g].[id]
+LEFT JOIN [txn].[spatials] AS [s0] ON [g].[spatial_id] = [s0].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s1] ON [s0].[geometry_id] = [s1].[id]
+LEFT JOIN [txn].[text_references] AS [t] ON [r].[text_id] = [t].[id]
+INNER JOIN [txn].[auth_identities] AS [a] ON [s].[identity_id] = [a].[id]
+LEFT JOIN [txn].[references] AS [r0] ON [s].[receipent_id] = [r0].[id]
+LEFT JOIN [txn].[date_references] AS [d0] ON [r0].[date_id] = [d0].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e1] ON [r0].[entity_id] = [e1].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e2] ON [e1].[summary_id] = [e2].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g0] ON [r0].[location_id] = [g0].[id]
+LEFT JOIN [txn].[spatials] AS [s2] ON [g0].[spatial_id] = [s2].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s3] ON [s2].[geometry_id] = [s3].[id]
+LEFT JOIN [txn].[text_references] AS [t0] ON [r0].[text_id] = [t0].[id]
+LEFT JOIN [txn].[references] AS [r1] ON [s].[start_reference_id] = [r1].[id]
+LEFT JOIN [txn].[date_references] AS [d1] ON [r1].[date_id] = [d1].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e3] ON [r1].[entity_id] = [e3].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e4] ON [e3].[summary_id] = [e4].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g1] ON [r1].[location_id] = [g1].[id]
+LEFT JOIN [txn].[spatials] AS [s4] ON [g1].[spatial_id] = [s4].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s5] ON [s4].[geometry_id] = [s5].[id]
+LEFT JOIN [txn].[text_references] AS [t1] ON [r1].[text_id] = [t1].[id]
+INNER JOIN [txn].[spatial_geographies] AS [s6] ON [s0].[id] = [s6].[spatial_id]
+WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a17a98-e060-4834-a2f4-00060ec83bf0'') AND ([s].[transaction_id] < @__batchId_1)
+ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
+```
+
+```sql
+exec sp_executesql N'SELECT [s6].[id], [s6].[elevation], [s6].[index_in_spatial], [s6].[latitude], [s6].[longitude], [s6].[spatial_id], [s6].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]
+FROM [txn].[shipping_units] AS [s]
+LEFT JOIN [txn].[references] AS [r] ON [s].[end_reference_id] = [r].[id]
+LEFT JOIN [txn].[date_references] AS [d] ON [r].[date_id] = [d].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e] ON [r].[entity_id] = [e].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e0] ON [e].[summary_id] = [e0].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g] ON [r].[location_id] = [g].[id]
+LEFT JOIN [txn].[spatials] AS [s0] ON [g].[spatial_id] = [s0].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s1] ON [s0].[geometry_id] = [s1].[id]
+LEFT JOIN [txn].[text_references] AS [t] ON [r].[text_id] = [t].[id]
+INNER JOIN [txn].[auth_identities] AS [a] ON [s].[identity_id] = [a].[id]
+LEFT JOIN [txn].[references] AS [r0] ON [s].[receipent_id] = [r0].[id]
+LEFT JOIN [txn].[date_references] AS [d0] ON [r0].[date_id] = [d0].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e1] ON [r0].[entity_id] = [e1].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e2] ON [e1].[summary_id] = [e2].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g0] ON [r0].[location_id] = [g0].[id]
+LEFT JOIN [txn].[spatials] AS [s2] ON [g0].[spatial_id] = [s2].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s3] ON [s2].[geometry_id] = [s3].[id]
+LEFT JOIN [txn].[text_references] AS [t0] ON [r0].[text_id] = [t0].[id]
+LEFT JOIN [txn].[references] AS [r1] ON [s].[start_reference_id] = [r1].[id]
+LEFT JOIN [txn].[date_references] AS [d1] ON [r1].[date_id] = [d1].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e3] ON [r1].[entity_id] = [e3].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e4] ON [e3].[summary_id] = [e4].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g1] ON [r1].[location_id] = [g1].[id]
+LEFT JOIN [txn].[spatials] AS [s4] ON [g1].[spatial_id] = [s4].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s5] ON [s4].[geometry_id] = [s5].[id]
+LEFT JOIN [txn].[text_references] AS [t1] ON [r1].[text_id] = [t1].[id]
+INNER JOIN [txn].[spatial_geographies] AS [s6] ON [s2].[id] = [s6].[spatial_id]
+WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a17a98-e060-4834-a2f4-00060ec83bf0'') AND ([s].[transaction_id] < @__batchId_1)
+ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
+```
 
 ```sql
 exec sp_executesql N'SELECT [t2].[id], [t2].[cargo_request_id], [t2].[consignment_id], [t2].[container_id], [t2].[date_id], [t2].[entity_id], [t2].[index_in_cargo_request], [t2].[index_in_consignment], [t2].[index_in_container], [t2].[index_in_inventory_item], [t2].[index_in_shipping_unit], [t2].[index_in_task], [t2].[index_in_work_item], [t2].[index_in_work_order], [t2].[inventory_item_id], [t2].[location_id], [t2].[shipping_unit_id], [t2].[task_id], [t2].[text_id], [t2].[work_item_id], [t2].[work_order_id], [t2].[id0], [t2].[comments], [t2].[date], [t2].[id1], [t2].[entity_id0], [t2].[entity_type], [t2].[revision], [t2].[summary_id], [t2].[id2], [t2].[basic], [t2].[detailed], [t2].[extended], [t2].[id3], [t2].[geo_mismatch], [t2].[spatial_id], [t2].[id4], [t2].[geometry_id], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id5], [t2].[id6], [t2].[b], [t2].[h], [t2].[l], [t2].[text]
@@ -278,6 +410,83 @@ INNER JOIN (
 ) AS [t2] ON [s].[id] = [t2].[shipping_unit_id]
 WHERE [s].[shipping_unit_id] IN (''3af6a089-4381-4b4b-a421-003a72fe9a61'', ''8b4fe27d-9cd3-466d-af2b-003b8145f0a7'') AND ([s].[transaction_id] < @__batchId_1)
 ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id], [t2].[id0], [t2].[id1], [t2].[id2], [t2].[id3], [t2].[id4], [t2].[id5], [t2].[id6]',N'@__batchId_1 bigint',@__batchId_1=200000
+```
+
+```sql
+exec sp_executesql N'SELECT [s8].[id], [s8].[elevation], [s8].[index_in_spatial], [s8].[latitude], [s8].[longitude], [s8].[spatial_id], [s8].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id], [t2].[id0], [t2].[id1], [t2].[id2], [t2].[id3], [t2].[id4], [t2].[id5], [t2].[id6]
+FROM [txn].[shipping_units] AS [s]
+LEFT JOIN [txn].[references] AS [r] ON [s].[end_reference_id] = [r].[id]
+LEFT JOIN [txn].[date_references] AS [d] ON [r].[date_id] = [d].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e] ON [r].[entity_id] = [e].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e0] ON [e].[summary_id] = [e0].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g] ON [r].[location_id] = [g].[id]
+LEFT JOIN [txn].[spatials] AS [s0] ON [g].[spatial_id] = [s0].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s1] ON [s0].[geometry_id] = [s1].[id]
+LEFT JOIN [txn].[text_references] AS [t] ON [r].[text_id] = [t].[id]
+INNER JOIN [txn].[auth_identities] AS [a] ON [s].[identity_id] = [a].[id]
+LEFT JOIN [txn].[references] AS [r0] ON [s].[receipent_id] = [r0].[id]
+LEFT JOIN [txn].[date_references] AS [d0] ON [r0].[date_id] = [d0].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e1] ON [r0].[entity_id] = [e1].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e2] ON [e1].[summary_id] = [e2].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g0] ON [r0].[location_id] = [g0].[id]
+LEFT JOIN [txn].[spatials] AS [s2] ON [g0].[spatial_id] = [s2].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s3] ON [s2].[geometry_id] = [s3].[id]
+LEFT JOIN [txn].[text_references] AS [t0] ON [r0].[text_id] = [t0].[id]
+LEFT JOIN [txn].[references] AS [r1] ON [s].[start_reference_id] = [r1].[id]
+LEFT JOIN [txn].[date_references] AS [d1] ON [r1].[date_id] = [d1].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e3] ON [r1].[entity_id] = [e3].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e4] ON [e3].[summary_id] = [e4].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g1] ON [r1].[location_id] = [g1].[id]
+LEFT JOIN [txn].[spatials] AS [s4] ON [g1].[spatial_id] = [s4].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s5] ON [s4].[geometry_id] = [s5].[id]
+LEFT JOIN [txn].[text_references] AS [t1] ON [r1].[text_id] = [t1].[id]
+INNER JOIN (
+    SELECT [r2].[id], [r2].[shipping_unit_id], [d2].[id] AS [id0], [e5].[id] AS [id1], [e6].[id] AS [id2], [g2].[id] AS [id3], [s6].[id] AS [id4], [s7].[id] AS [id5], [t3].[id] AS [id6]
+    FROM [txn].[references] AS [r2]
+    LEFT JOIN [txn].[date_references] AS [d2] ON [r2].[date_id] = [d2].[id]
+    LEFT JOIN [txn].[entity_summary_references] AS [e5] ON [r2].[entity_id] = [e5].[id]
+    LEFT JOIN [txn].[entity_summaries] AS [e6] ON [e5].[summary_id] = [e6].[id]
+    LEFT JOIN [txn].[geo_location_references] AS [g2] ON [r2].[location_id] = [g2].[id]
+    LEFT JOIN [txn].[spatials] AS [s6] ON [g2].[spatial_id] = [s6].[id]
+    LEFT JOIN [txn].[spatial_geometries] AS [s7] ON [s6].[geometry_id] = [s7].[id]
+    LEFT JOIN [txn].[text_references] AS [t3] ON [r2].[text_id] = [t3].[id]
+) AS [t2] ON [s].[id] = [t2].[shipping_unit_id]
+INNER JOIN [txn].[spatial_geographies] AS [s8] ON [t2].[id4] = [s8].[spatial_id]
+WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a17a98-e060-4834-a2f4-00060ec83bf0'') AND ([s].[transaction_id] < @__batchId_1)
+ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id], [t2].[id0], [t2].[id1], [t2].[id2], [t2].[id3], [t2].[id4], [t2].[id5], [t2].[id6]',N'@__batchId_1 bigint',@__batchId_1=200000
+```
+
+```sql
+exec sp_executesql N'SELECT [s6].[id], [s6].[elevation], [s6].[index_in_spatial], [s6].[latitude], [s6].[longitude], [s6].[spatial_id], [s6].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]
+FROM [txn].[shipping_units] AS [s]
+LEFT JOIN [txn].[references] AS [r] ON [s].[end_reference_id] = [r].[id]
+LEFT JOIN [txn].[date_references] AS [d] ON [r].[date_id] = [d].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e] ON [r].[entity_id] = [e].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e0] ON [e].[summary_id] = [e0].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g] ON [r].[location_id] = [g].[id]
+LEFT JOIN [txn].[spatials] AS [s0] ON [g].[spatial_id] = [s0].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s1] ON [s0].[geometry_id] = [s1].[id]
+LEFT JOIN [txn].[text_references] AS [t] ON [r].[text_id] = [t].[id]
+INNER JOIN [txn].[auth_identities] AS [a] ON [s].[identity_id] = [a].[id]
+LEFT JOIN [txn].[references] AS [r0] ON [s].[receipent_id] = [r0].[id]
+LEFT JOIN [txn].[date_references] AS [d0] ON [r0].[date_id] = [d0].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e1] ON [r0].[entity_id] = [e1].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e2] ON [e1].[summary_id] = [e2].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g0] ON [r0].[location_id] = [g0].[id]
+LEFT JOIN [txn].[spatials] AS [s2] ON [g0].[spatial_id] = [s2].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s3] ON [s2].[geometry_id] = [s3].[id]
+LEFT JOIN [txn].[text_references] AS [t0] ON [r0].[text_id] = [t0].[id]
+LEFT JOIN [txn].[references] AS [r1] ON [s].[start_reference_id] = [r1].[id]
+LEFT JOIN [txn].[date_references] AS [d1] ON [r1].[date_id] = [d1].[id]
+LEFT JOIN [txn].[entity_summary_references] AS [e3] ON [r1].[entity_id] = [e3].[id]
+LEFT JOIN [txn].[entity_summaries] AS [e4] ON [e3].[summary_id] = [e4].[id]
+LEFT JOIN [txn].[geo_location_references] AS [g1] ON [r1].[location_id] = [g1].[id]
+LEFT JOIN [txn].[spatials] AS [s4] ON [g1].[spatial_id] = [s4].[id]
+LEFT JOIN [txn].[spatial_geometries] AS [s5] ON [s4].[geometry_id] = [s5].[id]
+LEFT JOIN [txn].[text_references] AS [t1] ON [r1].[text_id] = [t1].[id]
+INNER JOIN [txn].[spatial_geographies] AS [s6] ON [s4].[id] = [s6].[spatial_id]
+WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a17a98-e060-4834-a2f4-00060ec83bf0'') AND ([s].[transaction_id] < @__batchId_1)
+ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
 ### EF6 with EFPlus optimized, which somehow in between
