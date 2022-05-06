@@ -18,7 +18,6 @@ namespace EF2Benchmark
             }
 
 		}
-
 		[Benchmark]
 		public void ShippingUnitsWithComposites1()
 		{

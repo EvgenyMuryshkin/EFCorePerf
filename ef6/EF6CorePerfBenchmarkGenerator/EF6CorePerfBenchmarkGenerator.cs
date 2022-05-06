@@ -105,6 +105,11 @@ namespace EF6CorePerfBenchmarkGenerator
 					}
 
 					linqBuilder.AppendLine("\t\t;");
+
+					if (version == "6")
+                    {
+						linqBuilder.AppendLine($"\t\tpublic IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites{idx}AsSplitQuery => ShippingUnitsWithComposites{idx}.AsSplitQuery();");
+					}
 				}
 
 				linqBuilder.AppendLine("\t} // end context");
@@ -137,6 +142,23 @@ namespace EF6CorePerfBenchmarkGenerator
             }}
 ");
 					benchmarkBuilder.AppendLine("\t\t}");
+
+					if (version == "6")
+                    {
+						benchmarkBuilder.AppendLine($"\t\t[Benchmark]");
+						benchmarkBuilder.AppendLine($"\t\tpublic void ShippingUnitsWithComposites{idx}AsSplitQuery()");
+						benchmarkBuilder.AppendLine("\t\t{");
+						benchmarkBuilder.AppendLine($@"
+            using (var ctx = Context)
+            {{
+                var shippingUnitIds = suIds[Idx];
+                var entities = ctx.ShippingUnitsWithComposites{idx}AsSplitQuery.Where(i => shippingUnitIds.Contains(i.ShippingUnitId) && i.TransactionId < batchId).ToList();
+                if (entities.Count == 0) 
+                    throw new Exception();
+            }}
+");
+						benchmarkBuilder.AppendLine("\t\t}");
+					}
 				}
 				benchmarkBuilder.AppendLine("\t} // end benchmark");
 				benchmarkBuilder.AppendLine("} // end ns");

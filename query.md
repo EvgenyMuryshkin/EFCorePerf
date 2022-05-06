@@ -67,7 +67,7 @@
 | ShippingUnitsWithComposites61 |   0 | 16,421.6 us | 327.67 us |   907.97 us | 16,069.8 us |
 
 
-## EF6
+## EF6 - Single Query
 
 |                        Method | Idx |        Mean |       Error |      StdDev |      Median |
 |------------------------------ |---- |------------:|------------:|------------:|------------:|
@@ -133,6 +133,72 @@
 | ShippingUnitsWithComposites59 |   0 | 54,414.8 us | 1,076.61 us | 2,473.70 us | 53,827.7 us |
 | ShippingUnitsWithComposites60 |   0 | 50,471.6 us | 1,003.13 us | 1,304.35 us | 49,864.2 us |
 | ShippingUnitsWithComposites61 |   0 | 52,216.9 us |   851.93 us |   755.22 us | 51,955.0 us |
+
+#EF6 - split query
+|                                    Method | Idx |         Mean |       Error |       StdDev |       Median |
+|------------------------------------------ |---- |-------------:|------------:|-------------:|-------------:|
+|  ShippingUnitsWithComposites0AsSplitQuery |   0 |     536.1 us |     6.08 us |      5.39 us |     534.9 us |
+|  ShippingUnitsWithComposites1AsSplitQuery |   0 |     930.3 us |    15.57 us |     14.57 us |     930.5 us |
+|  ShippingUnitsWithComposites2AsSplitQuery |   0 |     818.1 us |     9.67 us |      8.08 us |     817.2 us |
+|  ShippingUnitsWithComposites3AsSplitQuery |   0 |     930.4 us |     9.64 us |      9.02 us |     927.7 us |
+|  ShippingUnitsWithComposites4AsSplitQuery |   0 |   1,473.9 us |    26.70 us |     36.54 us |   1,454.7 us |
+|  ShippingUnitsWithComposites5AsSplitQuery |   0 |   1,390.8 us |    22.96 us |     22.55 us |   1,380.4 us |
+|  ShippingUnitsWithComposites6AsSplitQuery |   0 |   1,705.2 us |    31.72 us |     50.32 us |   1,685.4 us |
+|  ShippingUnitsWithComposites7AsSplitQuery |   0 |   1,356.0 us |    26.94 us |     35.04 us |   1,337.8 us |
+|  ShippingUnitsWithComposites8AsSplitQuery |   0 |   1,867.3 us |    35.20 us |     54.80 us |   1,850.6 us |
+|  ShippingUnitsWithComposites9AsSplitQuery |   0 |   3,047.1 us |   132.75 us |    389.32 us |   2,930.5 us |
+| ShippingUnitsWithComposites10AsSplitQuery |   0 |   3,726.2 us |   172.51 us |    492.19 us |   3,605.2 us |
+| ShippingUnitsWithComposites11AsSplitQuery |   0 |   3,608.3 us |   176.58 us |    515.09 us |   3,420.2 us |
+| ShippingUnitsWithComposites12AsSplitQuery |   0 |   4,283.9 us |   147.05 us |    424.28 us |   4,298.9 us |
+| ShippingUnitsWithComposites13AsSplitQuery |   0 |   3,300.9 us |   133.71 us |    390.03 us |   3,227.6 us |
+| ShippingUnitsWithComposites14AsSplitQuery |   0 |   3,541.8 us |   132.79 us |    389.45 us |   3,404.2 us |
+| ShippingUnitsWithComposites15AsSplitQuery |   0 |   4,193.6 us |   114.69 us |    329.07 us |   4,132.0 us |
+| ShippingUnitsWithComposites16AsSplitQuery |   0 |   4,148.8 us |   186.15 us |    537.08 us |   4,108.1 us |
+| ShippingUnitsWithComposites17AsSplitQuery |   0 |   4,826.1 us |   259.53 us |    752.95 us |   4,695.4 us |
+| ShippingUnitsWithComposites18AsSplitQuery |   0 |   5,078.1 us |   229.98 us |    663.54 us |   5,032.1 us |
+| ShippingUnitsWithComposites19AsSplitQuery |   0 |   3,787.2 us |   135.73 us |    391.62 us |   3,791.9 us |
+| ShippingUnitsWithComposites20AsSplitQuery |   0 |   3,636.1 us |   161.24 us |    470.33 us |   3,494.9 us |
+| ShippingUnitsWithComposites21AsSplitQuery |   0 |   4,627.1 us |   195.75 us |    567.90 us |   4,559.0 us |
+| ShippingUnitsWithComposites22AsSplitQuery |   0 |   5,476.6 us |   222.73 us |    639.06 us |   5,411.7 us |
+| ShippingUnitsWithComposites23AsSplitQuery |   0 |   5,662.3 us |   311.32 us |    913.04 us |   5,577.6 us |
+| ShippingUnitsWithComposites24AsSplitQuery |   0 |   5,324.3 us |   183.69 us |    529.97 us |   5,264.6 us |
+| ShippingUnitsWithComposites25AsSplitQuery |   0 |   3,466.4 us |    54.18 us |     66.54 us |   3,451.5 us |
+| ShippingUnitsWithComposites26AsSplitQuery |   0 |   5,355.1 us |   302.17 us |    871.84 us |   5,178.6 us |
+| ShippingUnitsWithComposites27AsSplitQuery |   0 |   4,880.0 us |   239.90 us |    695.99 us |   4,874.6 us |
+| ShippingUnitsWithComposites28AsSplitQuery |   0 |   6,137.8 us |   266.29 us |    776.77 us |   6,086.6 us |
+| ShippingUnitsWithComposites29AsSplitQuery |   0 |   5,643.2 us |   234.88 us |    681.42 us |   5,483.4 us |
+| ShippingUnitsWithComposites30AsSplitQuery |   0 |   6,770.5 us |   251.82 us |    742.50 us |   6,696.9 us |
+| ShippingUnitsWithComposites31AsSplitQuery |   0 |   6,834.8 us |   281.65 us |    826.02 us |   6,742.9 us |
+| ShippingUnitsWithComposites32AsSplitQuery |   0 |  40,420.9 us |   135.90 us |    113.48 us |  40,427.3 us |
+| ShippingUnitsWithComposites33AsSplitQuery |   0 |  41,043.9 us | 1,401.15 us |  3,997.57 us |  40,543.1 us |
+| ShippingUnitsWithComposites34AsSplitQuery |   0 |  41,651.6 us | 1,797.82 us |  5,100.13 us |  40,491.8 us |
+| ShippingUnitsWithComposites35AsSplitQuery |   0 |  46,609.1 us | 3,029.24 us |  8,788.38 us |  43,206.5 us |
+| ShippingUnitsWithComposites36AsSplitQuery |   0 |  41,981.6 us | 2,021.99 us |  5,833.89 us |  41,167.9 us |
+| ShippingUnitsWithComposites37AsSplitQuery |   0 |  47,407.1 us |   690.06 us |    645.49 us |  47,323.8 us |
+| ShippingUnitsWithComposites38AsSplitQuery |   0 |  53,412.9 us | 2,672.71 us |  7,796.41 us |  51,440.4 us |
+| ShippingUnitsWithComposites39AsSplitQuery |   0 |  55,746.0 us | 2,189.78 us |  6,282.88 us |  53,119.3 us |
+| ShippingUnitsWithComposites40AsSplitQuery |   0 |  66,301.2 us | 1,957.01 us |  5,646.43 us |  65,514.1 us |
+| ShippingUnitsWithComposites41AsSplitQuery |   0 |  77,695.2 us | 2,318.52 us |  6,726.45 us |  76,804.6 us |
+| ShippingUnitsWithComposites42AsSplitQuery |   0 |  65,822.9 us | 1,310.90 us |  3,718.81 us |  65,418.4 us |
+| ShippingUnitsWithComposites43AsSplitQuery |   0 |  74,544.8 us | 1,569.44 us |  4,578.12 us |  74,040.6 us |
+| ShippingUnitsWithComposites44AsSplitQuery |   0 |  78,822.9 us | 1,953.85 us |  5,668.48 us |  77,890.7 us |
+| ShippingUnitsWithComposites45AsSplitQuery |   0 |  80,269.5 us | 2,140.86 us |  6,176.86 us |  80,308.1 us |
+| ShippingUnitsWithComposites46AsSplitQuery |   0 |  80,898.8 us | 1,859.02 us |  5,393.37 us |  80,092.8 us |
+| ShippingUnitsWithComposites47AsSplitQuery |   0 |  82,082.6 us | 1,724.10 us |  4,974.42 us |  81,437.6 us |
+| ShippingUnitsWithComposites48AsSplitQuery |   0 |  85,541.6 us | 1,830.00 us |  5,309.18 us |  84,763.7 us |
+| ShippingUnitsWithComposites49AsSplitQuery |   0 |  85,166.2 us | 1,685.58 us |  4,499.16 us |  84,536.8 us |
+| ShippingUnitsWithComposites50AsSplitQuery |   0 | 141,404.6 us | 2,613.55 us |  6,057.29 us | 141,883.5 us |
+| ShippingUnitsWithComposites51AsSplitQuery |   0 | 233,612.8 us | 4,500.75 us |  6,454.83 us | 231,275.9 us |
+| ShippingUnitsWithComposites52AsSplitQuery |   0 | 233,837.5 us | 4,568.71 us |  7,633.28 us | 232,581.5 us |
+| ShippingUnitsWithComposites53AsSplitQuery |   0 | 247,752.0 us | 4,745.84 us | 12,502.45 us | 246,607.9 us |
+| ShippingUnitsWithComposites54AsSplitQuery |   0 | 260,719.2 us | 5,187.60 us |  8,808.94 us | 261,965.6 us |
+| ShippingUnitsWithComposites55AsSplitQuery |   0 | 258,694.8 us | 5,075.31 us |  9,532.66 us | 259,937.9 us |
+| ShippingUnitsWithComposites56AsSplitQuery |   0 | 260,965.5 us | 4,733.64 us |  7,908.86 us | 259,916.1 us |
+| ShippingUnitsWithComposites57AsSplitQuery |   0 | 250,275.5 us | 4,936.56 us |  9,744.28 us | 251,802.1 us |
+| ShippingUnitsWithComposites58AsSplitQuery |   0 | 257,142.5 us | 5,028.23 us |  6,175.12 us | 258,554.1 us |
+| ShippingUnitsWithComposites59AsSplitQuery |   0 | 271,008.4 us | 5,416.59 us |  8,432.98 us | 272,582.7 us |
+| ShippingUnitsWithComposites60AsSplitQuery |   0 | 263,155.9 us | 4,995.39 us |  9,007.71 us | 262,762.0 us |
+| ShippingUnitsWithComposites61AsSplitQuery |   0 | 274,869.6 us | 5,453.54 us |  8,960.32 us | 273,003.3 us |
 
 # Main table query + 1 additional joins
 

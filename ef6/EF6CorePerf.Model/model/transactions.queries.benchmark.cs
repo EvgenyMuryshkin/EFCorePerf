@@ -7,21 +7,25 @@ namespace transactions.sql
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites0 =>
 			ShippingUnits
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites0AsSplitQuery => ShippingUnitsWithComposites0.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites1 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites1AsSplitQuery => ShippingUnitsWithComposites1.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites2 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
 			.ThenInclude(c => c.Date)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites2AsSplitQuery => ShippingUnitsWithComposites2.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites3 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
 			.ThenInclude(c => c.Date)
 			.Include(c => c.EndReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites3AsSplitQuery => ShippingUnitsWithComposites3.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites4 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -29,6 +33,7 @@ namespace transactions.sql
 			.Include(c => c.EndReference)
 			.ThenInclude(c => c.Entity)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites4AsSplitQuery => ShippingUnitsWithComposites4.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites5 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -37,6 +42,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Entity)
 			.ThenInclude(c => c.Summary)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites5AsSplitQuery => ShippingUnitsWithComposites5.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites6 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -46,6 +52,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Summary)
 			.Include(c => c.EndReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites6AsSplitQuery => ShippingUnitsWithComposites6.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites7 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -56,6 +63,7 @@ namespace transactions.sql
 			.Include(c => c.EndReference)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites7AsSplitQuery => ShippingUnitsWithComposites7.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites8 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -67,6 +75,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites8AsSplitQuery => ShippingUnitsWithComposites8.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites9 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -79,6 +88,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geographies)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites9AsSplitQuery => ShippingUnitsWithComposites9.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites10 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -92,6 +102,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geographies)
 			.Include(c => c.EndReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites10AsSplitQuery => ShippingUnitsWithComposites10.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites11 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -106,6 +117,7 @@ namespace transactions.sql
 			.Include(c => c.EndReference)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites11AsSplitQuery => ShippingUnitsWithComposites11.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites12 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -121,6 +133,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites12AsSplitQuery => ShippingUnitsWithComposites12.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites13 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -137,6 +150,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geometry)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites13AsSplitQuery => ShippingUnitsWithComposites13.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites14 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -154,6 +168,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geometry)
 			.Include(c => c.EndReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites14AsSplitQuery => ShippingUnitsWithComposites14.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites15 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -172,6 +187,7 @@ namespace transactions.sql
 			.Include(c => c.EndReference)
 			.ThenInclude(c => c.Text)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites15AsSplitQuery => ShippingUnitsWithComposites15.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites16 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -191,6 +207,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Text)
 			.Include(c => c.Identity)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites16AsSplitQuery => ShippingUnitsWithComposites16.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites17 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -211,6 +228,7 @@ namespace transactions.sql
 			.Include(c => c.Identity)
 			.Include(c => c.Receipent)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites17AsSplitQuery => ShippingUnitsWithComposites17.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites18 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -232,6 +250,7 @@ namespace transactions.sql
 			.Include(c => c.Receipent)
 			.ThenInclude(c => c.Date)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites18AsSplitQuery => ShippingUnitsWithComposites18.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites19 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -254,6 +273,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Date)
 			.Include(c => c.Receipent)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites19AsSplitQuery => ShippingUnitsWithComposites19.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites20 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -277,6 +297,7 @@ namespace transactions.sql
 			.Include(c => c.Receipent)
 			.ThenInclude(c => c.Entity)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites20AsSplitQuery => ShippingUnitsWithComposites20.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites21 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -301,6 +322,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Entity)
 			.ThenInclude(c => c.Summary)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites21AsSplitQuery => ShippingUnitsWithComposites21.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites22 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -326,6 +348,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Summary)
 			.Include(c => c.Receipent)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites22AsSplitQuery => ShippingUnitsWithComposites22.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites23 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -352,6 +375,7 @@ namespace transactions.sql
 			.Include(c => c.Receipent)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites23AsSplitQuery => ShippingUnitsWithComposites23.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites24 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -379,6 +403,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites24AsSplitQuery => ShippingUnitsWithComposites24.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites25 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -407,6 +432,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geographies)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites25AsSplitQuery => ShippingUnitsWithComposites25.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites26 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -436,6 +462,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geographies)
 			.Include(c => c.Receipent)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites26AsSplitQuery => ShippingUnitsWithComposites26.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites27 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -466,6 +493,7 @@ namespace transactions.sql
 			.Include(c => c.Receipent)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites27AsSplitQuery => ShippingUnitsWithComposites27.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites28 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -497,6 +525,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites28AsSplitQuery => ShippingUnitsWithComposites28.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites29 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -529,6 +558,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geometry)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites29AsSplitQuery => ShippingUnitsWithComposites29.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites30 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -562,6 +592,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geometry)
 			.Include(c => c.Receipent)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites30AsSplitQuery => ShippingUnitsWithComposites30.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites31 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -596,6 +627,7 @@ namespace transactions.sql
 			.Include(c => c.Receipent)
 			.ThenInclude(c => c.Text)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites31AsSplitQuery => ShippingUnitsWithComposites31.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites32 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -631,6 +663,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Text)
 			.Include(c => c.References)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites32AsSplitQuery => ShippingUnitsWithComposites32.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites33 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -667,6 +700,7 @@ namespace transactions.sql
 			.Include(c => c.References)
 			.ThenInclude(c => c.Date)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites33AsSplitQuery => ShippingUnitsWithComposites33.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites34 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -704,6 +738,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Date)
 			.Include(c => c.References)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites34AsSplitQuery => ShippingUnitsWithComposites34.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites35 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -742,6 +777,7 @@ namespace transactions.sql
 			.Include(c => c.References)
 			.ThenInclude(c => c.Entity)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites35AsSplitQuery => ShippingUnitsWithComposites35.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites36 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -781,6 +817,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Entity)
 			.ThenInclude(c => c.Summary)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites36AsSplitQuery => ShippingUnitsWithComposites36.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites37 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -821,6 +858,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Summary)
 			.Include(c => c.References)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites37AsSplitQuery => ShippingUnitsWithComposites37.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites38 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -862,6 +900,7 @@ namespace transactions.sql
 			.Include(c => c.References)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites38AsSplitQuery => ShippingUnitsWithComposites38.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites39 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -904,6 +943,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites39AsSplitQuery => ShippingUnitsWithComposites39.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites40 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -947,6 +987,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geographies)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites40AsSplitQuery => ShippingUnitsWithComposites40.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites41 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -991,6 +1032,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geographies)
 			.Include(c => c.References)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites41AsSplitQuery => ShippingUnitsWithComposites41.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites42 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1036,6 +1078,7 @@ namespace transactions.sql
 			.Include(c => c.References)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites42AsSplitQuery => ShippingUnitsWithComposites42.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites43 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1082,6 +1125,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites43AsSplitQuery => ShippingUnitsWithComposites43.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites44 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1129,6 +1173,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geometry)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites44AsSplitQuery => ShippingUnitsWithComposites44.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites45 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1177,6 +1222,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geometry)
 			.Include(c => c.References)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites45AsSplitQuery => ShippingUnitsWithComposites45.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites46 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1226,6 +1272,7 @@ namespace transactions.sql
 			.Include(c => c.References)
 			.ThenInclude(c => c.Text)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites46AsSplitQuery => ShippingUnitsWithComposites46.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites47 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1276,6 +1323,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Text)
 			.Include(c => c.StartReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites47AsSplitQuery => ShippingUnitsWithComposites47.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites48 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1327,6 +1375,7 @@ namespace transactions.sql
 			.Include(c => c.StartReference)
 			.ThenInclude(c => c.Date)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites48AsSplitQuery => ShippingUnitsWithComposites48.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites49 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1379,6 +1428,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Date)
 			.Include(c => c.StartReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites49AsSplitQuery => ShippingUnitsWithComposites49.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites50 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1432,6 +1482,7 @@ namespace transactions.sql
 			.Include(c => c.StartReference)
 			.ThenInclude(c => c.Entity)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites50AsSplitQuery => ShippingUnitsWithComposites50.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites51 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1486,6 +1537,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Entity)
 			.ThenInclude(c => c.Summary)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites51AsSplitQuery => ShippingUnitsWithComposites51.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites52 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1541,6 +1593,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Summary)
 			.Include(c => c.StartReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites52AsSplitQuery => ShippingUnitsWithComposites52.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites53 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1597,6 +1650,7 @@ namespace transactions.sql
 			.Include(c => c.StartReference)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites53AsSplitQuery => ShippingUnitsWithComposites53.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites54 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1654,6 +1708,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites54AsSplitQuery => ShippingUnitsWithComposites54.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites55 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1712,6 +1767,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geographies)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites55AsSplitQuery => ShippingUnitsWithComposites55.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites56 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1771,6 +1827,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geographies)
 			.Include(c => c.StartReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites56AsSplitQuery => ShippingUnitsWithComposites56.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites57 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1831,6 +1888,7 @@ namespace transactions.sql
 			.Include(c => c.StartReference)
 			.ThenInclude(c => c.Location)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites57AsSplitQuery => ShippingUnitsWithComposites57.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites58 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1892,6 +1950,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Location)
 			.ThenInclude(c => c.Spatial)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites58AsSplitQuery => ShippingUnitsWithComposites58.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites59 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -1954,6 +2013,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Spatial)
 			.ThenInclude(c => c.Geometry)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites59AsSplitQuery => ShippingUnitsWithComposites59.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites60 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -2017,6 +2077,7 @@ namespace transactions.sql
 			.ThenInclude(c => c.Geometry)
 			.Include(c => c.StartReference)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites60AsSplitQuery => ShippingUnitsWithComposites60.AsSplitQuery();
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites61 =>
 			ShippingUnits
 			.Include(c => c.EndReference)
@@ -2081,5 +2142,6 @@ namespace transactions.sql
 			.Include(c => c.StartReference)
 			.ThenInclude(c => c.Text)
 		;
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithComposites61AsSplitQuery => ShippingUnitsWithComposites61.AsSplitQuery();
 	} // end context
 } // end ns
