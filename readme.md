@@ -123,6 +123,7 @@ https://drive.google.com/drive/folders/1WgKX1SelapG1Iqa1XVCjGA2SMlk-_xZE?usp=sha
 
 **No nested select statement in first query**, query works fast when run with different query parameters (about 50ms per query)
 
+#1
 ```sql
 exec sp_executesql N'SELECT [c].[id], [c].[comments], [c].[date_created], [c].[date_time], [c].[date_updated], [c].[end_reference_id], [c].[event], [c].[identity_id], [c].[is_system], [c].[quantity], [c].[receipent_id], [c].[revision], [c].[shipping_unit_id], [c].[start_reference_id], [c].[transaction_id], [c.StartReference].[id], [c.StartReference].[cargo_request_id], [c.StartReference].[consignment_id], [c.StartReference].[container_id], [c.StartReference].[date_id], [c.StartReference].[entity_id], [c.StartReference].[index_in_cargo_request], [c.StartReference].[index_in_consignment], [c.StartReference].[index_in_container], [c.StartReference].[index_in_inventory_item], [c.StartReference].[index_in_shipping_unit], [c.StartReference].[index_in_task], [c.StartReference].[index_in_work_item], [c.StartReference].[index_in_work_order], [c.StartReference].[inventory_item_id], [c.StartReference].[location_id], [c.StartReference].[shipping_unit_id], [c.StartReference].[task_id], [c.StartReference].[text_id], [c.StartReference].[work_item_id], [c.StartReference].[work_order_id], [c.StartReference.Date].[id], [c.StartReference.Date].[comments], [c.StartReference.Date].[date], [c.StartReference.Entity].[id], [c.StartReference.Entity].[entity_id], [c.StartReference.Entity].[entity_type], [c.StartReference.Entity].[revision], [c.StartReference.Entity].[summary_id], [c.StartReference.Entity.Summary].[id], [c.StartReference.Entity.Summary].[basic], 
 [c.StartReference.Entity.Summary].[detailed], [c.StartReference.Entity.Summary].[extended], [c.StartReference.Location].[id], [c.StartReference.Location].[geo_mismatch], [c.StartReference.Location].[spatial_id], [c.StartReference.Location.Spatial].[id], [c.StartReference.Location.Spatial].[geometry_id], 
@@ -162,6 +163,7 @@ WHERE [c].[shipping_unit_id] IN (''1bc4529a-932c-4590-aeea-000f5221773d'', ''95d
 ORDER BY [c.EndReference.Location.Spatial].[id], [c.Receipent.Location.Spatial].[id], [c].[id], [c.StartReference.Location.Spatial].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
+#2
 ```sql
 exec sp_executesql N'SELECT [c.References].[id], [c.References].[cargo_request_id], [c.References].[consignment_id], [c.References].[container_id], [c.References].[date_id], [c.References].[entity_id], [c.References].[index_in_cargo_request], [c.References].[index_in_consignment], [c.References].[index_in_container], [c.References].[index_in_inventory_item], [c.References].[index_in_shipping_unit], [c.References].[index_in_task], [c.References].[index_in_work_item], [c.References].[index_in_work_order], [c.References].[inventory_item_id], [c.References].[location_id], [c.References].[shipping_unit_id], [c.References].[task_id], [c.References].[text_id], [c.References].[work_item_id], [c.References].[work_order_id], [t.Text].[id], [t.Text].[text], [t.Location].[id], [t.Location].[geo_mismatch], [t.Location].[spatial_id], [t.Location.Spatial].[id], [t.Location.Spatial].[geometry_id], [t.Location.Spatial.Geometry].[id], [t.Location.Spatial.Geometry].[b], [t.Location.Spatial.Geometry].[h], [t.Location.Spatial.Geometry].[l], [t.Entity].[id], [t.Entity].[entity_id], [t.Entity].[entity_type], [t.Entity].[revision], [t.Entity].[summary_id], [t.Entity.Summary].[id], [t.Entity.Summary].[basic], [t.Entity.Summary].[detailed], [t.Entity.Summary].[extended], [t.Date].[id], [t.Date].[comments], [t.Date].[date]
 FROM [txn].[references] AS [c.References]
@@ -209,6 +211,7 @@ ORDER BY [t1].[id0], [t1].[id1], [t1].[id], [t.Location.Spatial].[id]',N'@__batc
 
 **Nested select statement** in single query, query works slow when run with different query parameters (about 500ms per query), works fast for the same query parameters (about 50ms)
 
+#1
 ```sql
 exec sp_executesql N'SELECT [s].[id], [s].[comments], [s].[date_created], [s].[date_time], [s].[date_updated], [s].[end_reference_id], [s].[event], [s].[identity_id], [s].[is_system], [s].[quantity], [s].[receipent_id], [s].[revision], [s].[shipping_unit_id], [s].[start_reference_id], [s].[transaction_id], [r].[id], [r].[cargo_request_id], [r].[consignment_id], [r].[container_id], [r].[date_id], [r].[entity_id], [r].[index_in_cargo_request], [r].[index_in_consignment], [r].[index_in_container], [r].[index_in_inventory_item], [r].[index_in_shipping_unit], [r].[index_in_task], [r].[index_in_work_item], 
 [r].[index_in_work_order], [r].[inventory_item_id], [r].[location_id], [r].[shipping_unit_id], [r].[task_id], [r].[text_id], [r].[work_item_id], [r].[work_order_id], [d].[id], [d].[comments], [d].[date], [e].[id], [e].[entity_id], [e].[entity_type], [e].[revision], [e].[summary_id], [e0].[id], [e0].[basic], 
@@ -267,6 +270,7 @@ ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id],
 First set of queries are fast and do not have nested select
 Subsequent query with nested select is stalling data fetch
 
+#1
 ```sql
 exec sp_executesql N'SELECT [s].[id], [s].[comments], [s].[date_created], [s].[date_time], [s].[date_updated], [s].[end_reference_id], [s].[event], [s].[identity_id], [s].[is_system], [s].[quantity], [s].[receipent_id], [s].[revision], 
 [s].[shipping_unit_id], [s].[start_reference_id], [s].[transaction_id], [r].[id], [r].[cargo_request_id], [r].[consignment_id], [r].[container_id], [r].[date_id], [r].[entity_id], [r].[index_in_cargo_request], [r].[index_in_consignment], 
@@ -303,6 +307,7 @@ WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a
 ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
+#2
 ```sql
 exec sp_executesql N'SELECT [s6].[id], [s6].[elevation], [s6].[index_in_spatial], [s6].[latitude], [s6].[longitude], [s6].[spatial_id], [s6].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]
 FROM [txn].[shipping_units] AS [s]
@@ -336,6 +341,7 @@ WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a
 ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
+#3
 ```sql
 exec sp_executesql N'SELECT [s6].[id], [s6].[elevation], [s6].[index_in_spatial], [s6].[latitude], [s6].[longitude], [s6].[spatial_id], [s6].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]
 FROM [txn].[shipping_units] AS [s]
@@ -369,6 +375,7 @@ WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a
 ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
+#4
 ```sql
 exec sp_executesql N'SELECT [t2].[id], [t2].[cargo_request_id], [t2].[consignment_id], [t2].[container_id], [t2].[date_id], [t2].[entity_id], [t2].[index_in_cargo_request], [t2].[index_in_consignment], [t2].[index_in_container], [t2].[index_in_inventory_item], [t2].[index_in_shipping_unit], [t2].[index_in_task], [t2].[index_in_work_item], [t2].[index_in_work_order], [t2].[inventory_item_id], [t2].[location_id], [t2].[shipping_unit_id], [t2].[task_id], [t2].[text_id], [t2].[work_item_id], [t2].[work_order_id], [t2].[id0], [t2].[comments], [t2].[date], [t2].[id1], [t2].[entity_id0], [t2].[entity_type], [t2].[revision], [t2].[summary_id], [t2].[id2], [t2].[basic], [t2].[detailed], [t2].[extended], [t2].[id3], [t2].[geo_mismatch], [t2].[spatial_id], [t2].[id4], [t2].[geometry_id], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id5], [t2].[id6], [t2].[b], [t2].[h], [t2].[l], [t2].[text]
 FROM [txn].[shipping_units] AS [s]
@@ -412,6 +419,7 @@ WHERE [s].[shipping_unit_id] IN (''3af6a089-4381-4b4b-a421-003a72fe9a61'', ''8b4
 ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id], [t2].[id0], [t2].[id1], [t2].[id2], [t2].[id3], [t2].[id4], [t2].[id5], [t2].[id6]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
+#5
 ```sql
 exec sp_executesql N'SELECT [s8].[id], [s8].[elevation], [s8].[index_in_spatial], [s8].[latitude], [s8].[longitude], [s8].[spatial_id], [s8].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id], [t2].[id0], [t2].[id1], [t2].[id2], [t2].[id3], [t2].[id4], [t2].[id5], [t2].[id6]
 FROM [txn].[shipping_units] AS [s]
@@ -456,6 +464,7 @@ WHERE [s].[shipping_unit_id] IN (''341fc4bf-55b7-456f-8d85-0002cbed978f'', ''f6a
 ORDER BY [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id], [t2].[id], [t2].[id0], [t2].[id1], [t2].[id2], [t2].[id3], [t2].[id4], [t2].[id5], [t2].[id6]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
+#6
 ```sql
 exec sp_executesql N'SELECT [s6].[id], [s6].[elevation], [s6].[index_in_spatial], [s6].[latitude], [s6].[longitude], [s6].[spatial_id], [s6].[timestamp], [s].[id], [r].[id], [d].[id], [e].[id], [e0].[id], [g].[id], [s0].[id], [s1].[id], [t].[id], [a].[id], [r0].[id], [d0].[id], [e1].[id], [e2].[id], [g0].[id], [s2].[id], [s3].[id], [t0].[id], [r1].[id], [d1].[id], [e3].[id], [e4].[id], [g1].[id], [s4].[id], [s5].[id], [t1].[id]
 FROM [txn].[shipping_units] AS [s]
