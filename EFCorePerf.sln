@@ -17,6 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF2CorePerf", "ef2\EF2CoreP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7BC2BABA-FF89-468A-8CFF-62452264A4EB}"
 	ProjectSection(SolutionItems) = preProject
+		query.md = query.md
 		readme.md = readme.md
 	EndProjectSection
 EndProject
@@ -28,9 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{CD6F48
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "common", "common\common.csproj", "{FD59739C-19AC-44C0-AB39-393BBB04588B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF2Benchmark", "ef2\EF2Benchmark\EF2Benchmark.csproj", "{2B1FDC2A-26D0-4B40-A15A-3719C1C8586F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF2Benchmark", "ef2\EF2Benchmark\EF2Benchmark.csproj", "{2B1FDC2A-26D0-4B40-A15A-3719C1C8586F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6Benchmark", "ef6\EF6Benchmark\EF6Benchmark.csproj", "{F6C0FAB0-84E4-4558-8200-A8390C32872D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6CorePerfBenchmarkGenerator", "ef6\EF6CorePerfBenchmarkGenerator\EF6CorePerfBenchmarkGenerator.csproj", "{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +90,12 @@ Global
 		{F6C0FAB0-84E4-4558-8200-A8390C32872D}.iOSDebug|Any CPU.Build.0 = Debug|Any CPU
 		{F6C0FAB0-84E4-4558-8200-A8390C32872D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C0FAB0-84E4-4558-8200-A8390C32872D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}.iOSDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}.iOSDebug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +109,7 @@ Global
 		{FD59739C-19AC-44C0-AB39-393BBB04588B} = {CD6F4802-5135-491E-B006-29881A7863AC}
 		{2B1FDC2A-26D0-4B40-A15A-3719C1C8586F} = {4DDC432D-7FAF-482A-B39A-64461CDC8177}
 		{F6C0FAB0-84E4-4558-8200-A8390C32872D} = {974BCDDA-C1B6-4C59-8E54-4717506C4679}
+		{CBB80519-94FA-4C5E-9A3B-C1D63ECF8667} = {974BCDDA-C1B6-4C59-8E54-4717506C4679}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {392E1749-5756-4BE8-892A-A7202E6F9EFE}

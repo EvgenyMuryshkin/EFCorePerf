@@ -122,6 +122,32 @@ public partial class txnTransactionsDBContext : EntityDbContext<txnTransactionsD
 				.AsSplitQuery()
 			;
 
+		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithCompositesAsSplitQuery1 =>
+			ShippingUnits
+				.Include(c => c.EndReference).ThenInclude(c => c.Date)
+				.Include(c => c.EndReference).ThenInclude(c => c.Entity).ThenInclude(c => c.Summary)
+				.Include(c => c.EndReference).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geographies)
+				.Include(c => c.EndReference).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geometry)
+				.Include(c => c.EndReference).ThenInclude(c => c.Text)
+				.Include(c => c.Identity)
+				.Include(c => c.Receipent).ThenInclude(c => c.Date)
+				.Include(c => c.Receipent).ThenInclude(c => c.Entity).ThenInclude(c => c.Summary)
+				.Include(c => c.Receipent).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geographies)
+				.Include(c => c.Receipent).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geometry)
+				.Include(c => c.Receipent).ThenInclude(c => c.Text)
+				.Include(c => c.References).ThenInclude(c => c.Date)
+				.Include(c => c.References).ThenInclude(c => c.Entity).ThenInclude(c => c.Summary)
+				.Include(c => c.References).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geographies)
+				.Include(c => c.References).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geometry)
+				.Include(c => c.References).ThenInclude(c => c.Text)
+				.Include(c => c.StartReference).ThenInclude(c => c.Date)
+				.Include(c => c.StartReference).ThenInclude(c => c.Entity).ThenInclude(c => c.Summary)
+				.Include(c => c.StartReference).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geographies)
+				.Include(c => c.StartReference).ThenInclude(c => c.Location).ThenInclude(c => c.Spatial).ThenInclude(c => c.Geometry)
+				.Include(c => c.StartReference).ThenInclude(c => c.Text)
+				.AsSplitQuery()
+			;
+
 		public IQueryable<txnShippingUnitDbEntity> ShippingUnitsWithCompositesOptimized =>
 			ShippingUnits
 				.IncludeOptimized(c => c.EndReference)
