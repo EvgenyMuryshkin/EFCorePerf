@@ -9,7 +9,7 @@ namespace EF6CorePerfBenchmarkGenerator
     public class EF6CorePerfBenchmarkGenerator
     {
         [TestMethod]
-        public void Generate()
+        public void GenerateIncrementalQuery()
         {
 			var versions = new[] { "2", "6" };
 
@@ -17,6 +17,7 @@ namespace EF6CorePerfBenchmarkGenerator
             {
 				var linqOutput = @$"C:\code\EFCorePerf\ef{version}\EF{version}CorePerf.Model\model\transactions.queries.benchmark.cs";
 				var benchmarkOutput = @$"C:\code\EFCorePerf\ef{version}\EF{version}Benchmark\EF{version}CoreBenchmark.generated.cs";
+				var unitTestOutput = @$"C:\code\EFCorePerf\ef{version}\EF{version}CorePerf.Tests\EF{version}CorePerf.generated.cs";
 
 				var linqLines = new string[]
 				{
@@ -164,6 +165,57 @@ namespace EF6CorePerfBenchmarkGenerator
 				benchmarkBuilder.AppendLine("} // end ns");
 
 				File.WriteAllText(benchmarkOutput, benchmarkBuilder.ToString());
+
+				// geneate tests
+
+				var unitTestsBuilder = new StringBuilder();
+				unitTestsBuilder.AppendLine("using Microsoft.VisualStudio.TestTools.UnitTesting;");
+				unitTestsBuilder.AppendLine("using System;");
+				unitTestsBuilder.AppendLine("using System.Linq;");
+				unitTestsBuilder.AppendLine($"namespace EF{version}PerfUnitTests");
+				unitTestsBuilder.AppendLine("{");
+
+				unitTestsBuilder.AppendLine($"\t[TestClass]");
+				unitTestsBuilder.AppendLine($"\tpublic partial class EF{version}PerfUnitTests");
+				unitTestsBuilder.AppendLine("\t{");
+
+				foreach (var idx in Enumerable.Range(0, linqLines.Length + 1))
+				{
+					unitTestsBuilder.AppendLine($"\t\t[TestMethod]");
+					unitTestsBuilder.AppendLine($"\t\tpublic void ShippingUnitsWithComposites{idx}()");
+					unitTestsBuilder.AppendLine("\t\t{");
+					unitTestsBuilder.AppendLine($@"
+            using (var ctx = Context)
+            {{
+                var shippingUnitIds = suIds[Idx];
+                var entities = ctx.ShippingUnitsWithComposites{idx}.Where(i => shippingUnitIds.Contains(i.ShippingUnitId) && i.TransactionId < batchId).ToList();
+                if (entities.Count == 0) 
+                    throw new Exception();
+            }}
+");
+					unitTestsBuilder.AppendLine("\t\t}");
+
+					if (version == "6")
+					{
+						unitTestsBuilder.AppendLine($"\t\t[TestMethod]");
+						unitTestsBuilder.AppendLine($"\t\tpublic void ShippingUnitsWithComposites{idx}AsSplitQuery()");
+						unitTestsBuilder.AppendLine("\t\t{");
+						unitTestsBuilder.AppendLine($@"
+            using (var ctx = Context)
+            {{
+                var shippingUnitIds = suIds[Idx];
+                var entities = ctx.ShippingUnitsWithComposites{idx}AsSplitQuery.Where(i => shippingUnitIds.Contains(i.ShippingUnitId) && i.TransactionId < batchId).ToList();
+                if (entities.Count == 0) 
+                    throw new Exception();
+            }}
+");
+						unitTestsBuilder.AppendLine("\t\t}");
+					}
+				}
+				unitTestsBuilder.AppendLine("\t} // end benchmark");
+				unitTestsBuilder.AppendLine("} // end ns");
+
+				File.WriteAllText(unitTestOutput, unitTestsBuilder.ToString());
 			}
 		}
     }
