@@ -14,7 +14,7 @@ namespace EF6Benchmark
         {
             var config = ManualConfig.CreateMinimumViable();
             config.AddExporter(CsvMeasurementsExporter.Default);
-            var summary = BenchmarkRunner.Run<EF6CoreBenchmarkTopPlusOne>(config);
+            var summary = BenchmarkRunner.Run<EF6CoreBenchmarkDistilled>(config);
         }
     }
 }

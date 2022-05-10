@@ -18,6 +18,7 @@ namespace EF2Benchmark
             }
         }
 
+        const int fetch = 100;
         const int interations = 1;
 
         [ParamsSource(nameof(ValuesForIdx))]
@@ -34,9 +35,9 @@ namespace EF2Benchmark
             using (var ctx = Context)
             {
                 var allIds = ctx.ShippingUnits.Select(i => i.ShippingUnitId).Distinct().ToList();
-                var testIds = Enumerable.Range(0, interations * 2).Select(_ => allIds[rnd.Next(allIds.Count)]);
+                var testIds = Enumerable.Range(0, fetch * 2).Select(_ => allIds[rnd.Next(allIds.Count)]);
 
-                foreach (var id in Enumerable.Range(0, interations))
+                foreach (var id in Enumerable.Range(0, fetch))
                 {
                     var shippingUnitIds = testIds.Skip(id * 2).Take(2).ToHashSet();
                     suIds.Add(shippingUnitIds);

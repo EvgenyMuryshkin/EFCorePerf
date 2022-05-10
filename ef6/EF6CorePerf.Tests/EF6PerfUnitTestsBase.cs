@@ -29,9 +29,11 @@ namespace EF6PerfUnitTests
             using (var ctx = Context)
             {
                 var allIds = ctx.ShippingUnits.Select(i => i.ShippingUnitId).Distinct().ToList();
-
-                var shippingUnitIds = allIds.Take(2).ToHashSet();
-                suIds.Add(shippingUnitIds);
+                foreach (var idx in Enumerable.Range(0, 100))
+                {
+                    var shippingUnitIds = allIds.Skip(2 * idx).Take(2).ToHashSet();
+                    suIds.Add(shippingUnitIds);
+                }
             }
         }
     }

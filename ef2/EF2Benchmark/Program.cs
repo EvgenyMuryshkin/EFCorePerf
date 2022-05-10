@@ -14,7 +14,7 @@ namespace EF2Benchmark
         {
             var config = ManualConfig.CreateMinimumViable();
             config.AddExporter(CsvMeasurementsExporter.Default);
-            var summary = BenchmarkRunner.Run<EF2CoreBenchmarkTopPlusOne>(config);
+            var summary = BenchmarkRunner.Run<EF2CoreBenchmarkDistilled>(config);
         }
     }
 }

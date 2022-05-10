@@ -281,3 +281,21 @@
 | ShippingUnitsTopPlusOne20AsSplitQuery |   0 | 1,087.8 us |  16.20 us |  14.36 us | 1,082.8 us |
 | ShippingUnitsTopPlusOne21AsSplitQuery |   0 |   408.3 us |   0.83 us |   0.70 us |   408.3 us |
 
+
+# Distilled 
+
+## EF2
+
+|    Method | Idx |     Mean |   Error |  StdDev |
+|---------- |---- |---------:|--------:|--------:|
+| Distilled |   0 | 244.2 ms | 4.70 ms | 5.60 ms |
+
+|    Method | Idx |     Mean |   Error |  StdDev |
+|---------- |---- |---------:|--------:|--------:|
+| Distilled |   0 | 274.8 ms | 5.40 ms | 9.46 ms |
+
+## EF6
+|                 Method | Idx |     Mean |   Error |  StdDev |   Median |
+|----------------------- |---- |---------:|--------:|--------:|---------:|
+|              Distilled |   0 | 168.8 ms | 3.35 ms | 5.01 ms | 166.3 ms |
+| Distilled_AsSplitQuery |   0 | 179.4 ms | 1.46 ms | 1.29 ms | 179.2 ms |

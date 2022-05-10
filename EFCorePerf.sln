@@ -17,11 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF2CorePerf", "ef2\EF2CoreP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7BC2BABA-FF89-468A-8CFF-62452264A4EB}"
 	ProjectSection(SolutionItems) = preProject
+		diff.md = diff.md
 		query.md = query.md
 		readme.md = readme.md
 		ShippingUnitsWithComposites31.md = ShippingUnitsWithComposites31.md
 		ShippingUnitsWithComposites31AsSplitQuery.md = ShippingUnitsWithComposites31AsSplitQuery.md
 		ShippingUnitsWithComposites32.md = ShippingUnitsWithComposites32.md
+		ShippingUnitsWithComposites32AsSplitQuery.md = ShippingUnitsWithComposites32AsSplitQuery.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "seed", "seed", "{F3EC5C49-2E14-4589-856A-DF14D32E35C1}"
