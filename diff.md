@@ -45,7 +45,7 @@ WHERE [s].[shipping_unit_id] IN (''3b39873e-f8d2-49e8-a3fc-000711bd28f0'', ''694
 ORDER BY [s].[id]',N'@__batchId_1 bigint',@__batchId_1=200000
 ```
 
-## EF6  - Split Qery
+## EF6  - Split Query
 ```sql
 exec sp_executesql N'SELECT [s].[id], [s].[comments], [s].[date_created], [s].[date_time], [s].[date_updated], [s].[end_reference_id], [s].[event], [s].[identity_id], [s].[is_system], [s].[quantity], [s].[receipent_id], [s].[revision], [s].[shipping_unit_id], [s].[start_reference_id], [s].[transaction_id]
 FROM [txn].[shipping_units] AS [s]
