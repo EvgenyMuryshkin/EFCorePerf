@@ -1,3 +1,23 @@
+## Single include
+
+```c#
+using (var ctx = Context)
+{
+	var query = ctx
+		.ShippingUnits
+		.Include(c => c.References)
+	;
+
+    foreach (var idx in Enumerable.Range(0, suIds.Count))
+    {
+        var shippingUnitIds = suIds[idx];
+        var entities = query.Where(i => shippingUnitIds.Contains(i.ShippingUnitId) && i.TransactionId < batchId).ToList();
+        if (entities.Count == 0)
+            throw new Exception();
+    }
+}
+```
+
 ## EF2
 
 ```sql
