@@ -19,6 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		query.md = query.md
 		readme.md = readme.md
+		ShippingUnitsWithComposites31.md = ShippingUnitsWithComposites31.md
+		ShippingUnitsWithComposites31AsSplitQuery.md = ShippingUnitsWithComposites31AsSplitQuery.md
+		ShippingUnitsWithComposites32.md = ShippingUnitsWithComposites32.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "seed", "seed", "{F3EC5C49-2E14-4589-856A-DF14D32E35C1}"

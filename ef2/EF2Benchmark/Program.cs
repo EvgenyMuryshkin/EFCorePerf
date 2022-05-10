@@ -4,6 +4,7 @@ using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
+using EF2BenchmarkTopPlusOne;
 
 namespace EF2Benchmark
 {
@@ -13,7 +14,7 @@ namespace EF2Benchmark
         {
             var config = ManualConfig.CreateMinimumViable();
             config.AddExporter(CsvMeasurementsExporter.Default);
-            var summary = BenchmarkRunner.Run<EF2CoreBenchmark>(config);
+            var summary = BenchmarkRunner.Run<EF2CoreBenchmarkTopPlusOne>(config);
         }
     }
 }

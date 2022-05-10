@@ -202,4 +202,82 @@
 
 # Main table query + 1 additional joins
 
-coming soon
+## EF2
+|                    Method | Idx |       Mean |    Error |   StdDev |     Median |
+|-------------------------- |---- |-----------:|---------:|---------:|-----------:|
+|  ShippingUnitsTopPlusOne0 |   0 |   894.8 us |  7.83 us |  6.54 us |   892.9 us |
+|  ShippingUnitsTopPlusOne1 |   0 | 1,153.9 us | 16.30 us | 12.73 us | 1,151.5 us |
+|  ShippingUnitsTopPlusOne2 |   0 |   853.9 us | 11.93 us | 10.58 us |   851.1 us |
+|  ShippingUnitsTopPlusOne3 |   0 |   887.1 us |  5.36 us |  4.47 us |   887.1 us |
+|  ShippingUnitsTopPlusOne4 |   0 |   606.4 us |  4.81 us |  3.75 us |   604.9 us |
+|  ShippingUnitsTopPlusOne5 |   0 |   800.5 us | 11.31 us | 10.03 us |   797.3 us |
+|  ShippingUnitsTopPlusOne6 |   0 |   640.0 us | 11.14 us | 18.00 us |   631.3 us |
+|  ShippingUnitsTopPlusOne7 |   0 |   761.4 us | 10.86 us |  9.07 us |   758.5 us |
+|  ShippingUnitsTopPlusOne8 |   0 |   660.8 us |  2.44 us |  2.16 us |   660.1 us |
+|  ShippingUnitsTopPlusOne9 |   0 |   587.5 us |  1.92 us |  1.80 us |   587.8 us |
+| ShippingUnitsTopPlusOne10 |   0 |   596.9 us | 12.16 us | 34.50 us |   610.9 us |
+| ShippingUnitsTopPlusOne11 |   0 | 2,870.7 us | 45.92 us | 79.20 us | 2,849.2 us |
+| ShippingUnitsTopPlusOne12 |   0 | 2,534.7 us | 10.99 us | 10.28 us | 2,535.7 us |
+| ShippingUnitsTopPlusOne13 |   0 | 2,158.4 us | 41.64 us | 47.95 us | 2,145.3 us |
+| ShippingUnitsTopPlusOne14 |   0 | 2,226.2 us | 13.50 us | 12.63 us | 2,226.1 us |
+| ShippingUnitsTopPlusOne15 |   0 | 3,377.9 us | 18.69 us | 15.61 us | 3,381.7 us |
+| ShippingUnitsTopPlusOne16 |   0 |   954.3 us | 18.42 us | 21.22 us |   962.2 us |
+| ShippingUnitsTopPlusOne17 |   0 |   964.7 us | 19.25 us | 29.40 us |   950.7 us |
+| ShippingUnitsTopPlusOne18 |   0 |   687.0 us |  2.52 us |  2.11 us |   687.0 us |
+| ShippingUnitsTopPlusOne19 |   0 | 1,107.3 us |  3.56 us |  3.16 us | 1,107.9 us |
+| ShippingUnitsTopPlusOne20 |   0 | 1,278.0 us | 20.57 us | 24.49 us | 1,281.0 us |
+| ShippingUnitsTopPlusOne21 |   0 |   373.1 us |  2.46 us |  2.05 us |   373.2 us |
+
+## EF6
+
+|                    Method | Idx |       Mean |     Error |    StdDev |     Median |
+|-------------------------- |---- |-----------:|----------:|----------:|-----------:|
+|  ShippingUnitsTopPlusOne0 |   0 |   856.6 us |  16.99 us |  42.93 us |   850.0 us |
+|  ShippingUnitsTopPlusOne1 |   0 | 1,021.3 us |  19.63 us |  18.37 us | 1,020.5 us |
+|  ShippingUnitsTopPlusOne2 |   0 | 1,082.1 us |   7.26 us |   6.79 us | 1,081.2 us |
+|  ShippingUnitsTopPlusOne3 |   0 |   915.2 us |   6.32 us |   4.93 us |   915.0 us |
+|  ShippingUnitsTopPlusOne4 |   0 | 1,043.4 us |   5.90 us |   4.93 us | 1,044.8 us |
+|  ShippingUnitsTopPlusOne5 |   0 |   590.3 us |  11.72 us |  16.05 us |   583.0 us |
+|  ShippingUnitsTopPlusOne6 |   0 |   682.8 us |   3.97 us |   3.71 us |   683.1 us |
+|  ShippingUnitsTopPlusOne7 |   0 |   795.3 us |   8.69 us |   7.70 us |   793.1 us |
+|  ShippingUnitsTopPlusOne8 |   0 |   620.0 us |   3.47 us |   2.71 us |   619.2 us |
+|  ShippingUnitsTopPlusOne9 |   0 |   574.0 us |   2.95 us |   2.75 us |   573.4 us |
+| ShippingUnitsTopPlusOne10 |   0 |   530.4 us |   5.89 us |   5.22 us |   530.1 us |
+| ShippingUnitsTopPlusOne11 |   0 | 2,032.3 us |  11.14 us |  10.42 us | 2,031.1 us |
+| ShippingUnitsTopPlusOne12 |   0 | 5,327.0 us |  96.09 us |  80.24 us | 5,328.2 us |
+| ShippingUnitsTopPlusOne13 |   0 | 2,044.4 us |  22.36 us |  20.91 us | 2,040.6 us |
+| ShippingUnitsTopPlusOne14 |   0 | 1,545.4 us |  10.94 us |   9.70 us | 1,547.5 us |
+| ShippingUnitsTopPlusOne15 |   0 | 2,856.2 us |  94.73 us | 276.33 us | 2,745.4 us |
+| ShippingUnitsTopPlusOne16 |   0 |   911.0 us |   8.42 us |   7.46 us |   912.5 us |
+| ShippingUnitsTopPlusOne17 |   0 | 1,232.7 us |  23.56 us |  22.04 us | 1,228.5 us |
+| ShippingUnitsTopPlusOne18 |   0 |   972.4 us |   8.53 us |   7.98 us |   971.6 us |
+| ShippingUnitsTopPlusOne19 |   0 | 1,148.5 us |  13.44 us |  12.57 us | 1,149.1 us |
+| ShippingUnitsTopPlusOne20 |   0 | 1,022.7 us |  20.11 us |  28.20 us | 1,010.0 us |
+| ShippingUnitsTopPlusOne21 |   0 |   446.2 us |   3.84 us |   3.59 us |   446.0 us |
+
+## EF6 SplitQuery
+|                                Method | Idx |       Mean |     Error |    StdDev |     Median |
+|-------------------------------------- |---- |-----------:|----------:|----------:|-----------:|
+|  ShippingUnitsTopPlusOne0AsSplitQuery |   0 | 1,169.4 us |  21.32 us |  18.90 us | 1,168.8 us |
+|  ShippingUnitsTopPlusOne1AsSplitQuery |   0 | 1,653.5 us |  32.76 us |  61.53 us | 1,620.2 us |
+|  ShippingUnitsTopPlusOne2AsSplitQuery |   0 | 1,420.4 us |   9.17 us |   8.13 us | 1,419.0 us |
+|  ShippingUnitsTopPlusOne3AsSplitQuery |   0 |   899.9 us |  13.89 us |  12.99 us |   901.6 us |
+|  ShippingUnitsTopPlusOne4AsSplitQuery |   0 |   898.7 us |  12.99 us |  10.85 us |   895.2 us |
+|  ShippingUnitsTopPlusOne5AsSplitQuery |   0 |   626.0 us |   9.21 us |   8.17 us |   628.2 us |
+|  ShippingUnitsTopPlusOne6AsSplitQuery |   0 |   565.8 us |   9.34 us |   7.80 us |   565.8 us |
+|  ShippingUnitsTopPlusOne7AsSplitQuery |   0 |   823.9 us |   4.17 us |   3.48 us |   823.2 us |
+|  ShippingUnitsTopPlusOne8AsSplitQuery |   0 | 1,114.2 us |   9.17 us |   7.66 us | 1,112.8 us |
+|  ShippingUnitsTopPlusOne9AsSplitQuery |   0 |   592.2 us |   8.57 us |   7.16 us |   591.8 us |
+| ShippingUnitsTopPlusOne10AsSplitQuery |   0 |   582.7 us |   2.97 us |   2.63 us |   582.7 us |
+| ShippingUnitsTopPlusOne11AsSplitQuery |   0 | 1,742.2 us |  15.56 us |  12.15 us | 1,739.3 us |
+| ShippingUnitsTopPlusOne12AsSplitQuery |   0 | 3,271.1 us | 132.59 us | 384.67 us | 3,301.7 us |
+| ShippingUnitsTopPlusOne13AsSplitQuery |   0 | 4,408.8 us | 218.26 us | 633.21 us | 4,307.6 us |
+| ShippingUnitsTopPlusOne14AsSplitQuery |   0 | 1,817.8 us |  11.74 us |   9.16 us | 1,821.8 us |
+| ShippingUnitsTopPlusOne15AsSplitQuery |   0 | 2,318.9 us |  28.19 us |  24.99 us | 2,314.9 us |
+| ShippingUnitsTopPlusOne16AsSplitQuery |   0 |   957.1 us |  19.10 us |  32.43 us |   960.0 us |
+| ShippingUnitsTopPlusOne17AsSplitQuery |   0 | 1,080.2 us |   5.49 us |   4.87 us | 1,080.1 us |
+| ShippingUnitsTopPlusOne18AsSplitQuery |   0 | 1,434.8 us |  14.11 us |  15.10 us | 1,432.3 us |
+| ShippingUnitsTopPlusOne19AsSplitQuery |   0 |   913.8 us |   8.31 us |   7.77 us |   913.3 us |
+| ShippingUnitsTopPlusOne20AsSplitQuery |   0 | 1,087.8 us |  16.20 us |  14.36 us | 1,082.8 us |
+| ShippingUnitsTopPlusOne21AsSplitQuery |   0 |   408.3 us |   0.83 us |   0.70 us |   408.3 us |
+
